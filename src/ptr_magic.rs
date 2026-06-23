@@ -1,6 +1,14 @@
 use core::ffi::c_void;
 use std::panic::Location;
 
+/// Box up a pointer into a raw pointer.
+#[macro_export]
+macro_rules! box_raw {
+    ($item:expr) => {
+        Box::into_raw(Box::new($item))
+    };
+}
+
 /// A shared trait for converting from/to a pointer. Specifically a (* mut Self)
 pub trait PtrMagic: Sized {
     /// Moves the object to the heap and returns a raw pointer.
