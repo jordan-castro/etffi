@@ -5,7 +5,7 @@ edition = "2024"
 license = "Apache-2.0"
 authors = ["Jordan Castro jordan@grupojvm.com"]
 description = "EpochTech FFI"
-# repository
+repository = "https://github.com/jordan-castro/etffi"
 
 [lib]
 crate-type = ["rlib"]
